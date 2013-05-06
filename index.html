@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/themes/GFSAPP.min.css" />
+		<link rel="stylesheet" href="css/themes/jquery.mobile.structure-1.3.1.min.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		
+	</head>
+	<body data-theme="a">
+		<div id="home" data-role="page" data-theme="a" data-title="LinkedIn API app - Home">
+			<div data-role="header" data-position="fixed" data-id="gf_header">
+				<h1>GFS App</h1>
+				<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right" >Info</a>
+			</div>
+			<div data-role="content" data-theme="a">
+				<p>Welcome to LinkedIn API App!</p>
+				<!-- 3. Displays a button to let the viewer authenticate -->
+				<script type="IN/Login"></script>
+				<!-- 4. Placeholder for the greeting -->
+				<div id="profiles"></div>
+			</div>
+		</div><!--end #home-->
+		
+		
+
+		
+		<div data-role="page" id="info" data-theme="a">
+			<div data-role="header" data-id="gf_header">
+				<h1>GFS Info</h1>
+			</div>
+			<div data-role="content">
+				<p>Gluten Free Social is an application meant to make living gluten free easier. Search for information and maybe even contribute to grow the GF community by spreading knowledge!</p>
+				<a href="#"
+					data-role="button"
+					data-inline="true"
+					data-rel="back"
+				>cancel</a>
+				<a href="#home"
+					data-role="button"
+					data-inline="true"
+				>home</a>
+			</div>
+		</div>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.mobile-1.3.1.min.js"></script>
+		<script type="text/javascript" src="http://platform.linkedin.com/in.js">
+		  api_key: mzi3e3s0dojy
+		  onLoad: onLinkedInLoad
+		  authorize: true
+		  scope: r_basicprofile r_emailaddress r_network 
+		</script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
