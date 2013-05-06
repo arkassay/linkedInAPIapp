@@ -2,15 +2,11 @@
 .ui-body-a.ui-content{
 	background: none;
 }
+.needAuth{
+	display:none;
+}
 /*home page styles*/
 #home .ui-btn {text-align: left}
 
 /*END home page styles*/
 
-/*individual post styles*/
-#mypost img{
-	max-width: 100% !important;
-	height: auto !important;
-}
-
-/*END individual post styles*/

@@ -12,27 +12,75 @@
 	<body data-theme="a">
 		<div id="home" data-role="page" data-theme="a" data-title="LinkedIn API app - Home">
 			<div data-role="header" data-position="fixed" data-id="gf_header">
-				<h1>GFS App</h1>
+				<h1>LinkedIn API App</h1>
 				<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right" >Info</a>
 			</div>
 			<div data-role="content" data-theme="a">
-				<p>Welcome to LinkedIn API App!</p>
 				<!-- 3. Displays a button to let the viewer authenticate -->
 				<script type="IN/Login"></script>
 				<!-- 4. Placeholder for the greeting -->
 				<div id="profiles"></div>
+				<ul class="needAuth" data-role="controlgroup" data-inset="true">
+					<li>
+						<a href="#connections" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Connections</a>
+					</li>
+					<li>
+						<a href="#fullProfile" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Member Profile</a>
+					</li>
+					<li>
+						<a href="#peopleSearch" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">People Search</a>
+					</li>
+					<li>
+						<a href="#groups" data-role="button" data-icon="arrow-r" data-transition="slide" data-iconpos="right">Groups</a>
+					</li>
+				</ul><!-- links -->
 			</div>
 		</div><!--end #home-->
 		
+		<div id="connections" data-role="page" data-theme="a" data-title="LinkedIn API - Connections">
+			<div data-role="header" data-position="fixed" data-id="app_header">
+				<h1>Connections</h1>
+				<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right">Info</a>
+			</div><!--end #header-->
+			<div data-role="content" id="connectionsList">
+				
+			</div><!--end content-->
+			
+		</div><!--end #connections-->
+		
+		<div id="fullProfile" data-role="page" data-theme="a" data-title="LinkedIn API - Full Profile">
+			<div data-role="header" data-position="fixed" data-id="app_header">
+				<h1>Full Profile</h1>
+				<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right">Info</a>
+			</div><!--end #header-->
+			<div data-role="content" id="memberProfile">
+				
+			</div><!--end content-->
+			
+		</div><!--end #fullProfile-->
+		
+		<div id="groups" data-role="page" data-theme="a" data-title="LinkedIn API - Groups">
+			<div data-role="header" data-position="fixed" data-id="app_header">
+				<h1>Groups</h1>
+				<a href="#home" data-icon="home" class="ui-btn-left" data-iconpos="notext" data-transition="slide" data-direction="reverse">Home</a>
+				<a href="#info" data-icon="info" data-iconpos="notext" data-rel="dialog" class="ui-btn-right">Info</a>
+			</div><!--end #header-->
+			<div data-role="content" id="groupsList">
+				
+			</div><!--end content-->
+			
+		</div><!--end #fullProfile-->
 		
 
 		
 		<div data-role="page" id="info" data-theme="a">
 			<div data-role="header" data-id="gf_header">
-				<h1>GFS Info</h1>
+				<h1>LinkedIn App Info</h1>
 			</div>
 			<div data-role="content">
-				<p>Gluten Free Social is an application meant to make living gluten free easier. Search for information and maybe even contribute to grow the GF community by spreading knowledge!</p>
+				<p>LinkedIn App, practice with API</p>
 				<a href="#"
 					data-role="button"
 					data-inline="true"
@@ -50,7 +98,7 @@
 		  api_key: mzi3e3s0dojy
 		  onLoad: onLinkedInLoad
 		  authorize: true
-		  scope: r_basicprofile r_emailaddress r_network 
+		  scope: r_basicprofile r_emailaddress r_network rw_groups
 		</script>
 		<script src="js/scripts.js"></script>
 	</body>
